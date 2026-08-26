@@ -1,0 +1,41 @@
+:root {
+  --il-space-1:  4px;
+  --il-space-2:  8px;
+  --il-space-3:  12px;
+  --il-space-4:  16px;
+  --il-space-5:  24px;
+  --il-space-6:  32px;
+  --il-space-7:  48px;
+  --il-space-8:  64px;
+  --il-space-9:  96px;
+  --il-space-10: 128px;
+
+  --il-section-y:   96px;   /* vertical rhythm between marketing sections */
+  --il-gutter:      48px;   /* page side gutter, desktop */
+  --il-gutter-sm:   20px;
+  --il-container:   1240px;
+  --il-measure:     68ch;   /* max body-copy line length */
+
+  --il-radius-0:    0px;    /* buttons, chips, dark panels */
+  --il-radius-sm:   4px;
+  --il-radius-md:   8px;
+  --il-radius-lg:   12px;   /* cards, media */
+  --il-radius-pill: 999px;  /* platform search / prompt field, avatars */
+
+  --il-border-hair: 1px;
+  --il-border-mid:  2px;
+  --il-bracket:     3px;    /* thickness of the logo bracket motif */
+
+  --il-shadow-sm: 0 1px 2px rgba(0,0,0,.06), 0 1px 3px rgba(0,0,0,.08);
+  --il-shadow-md: 0 2px 6px rgba(0,0,0,.06), 0 6px 16px rgba(0,0,0,.08);
+  --il-shadow-lg: 0 8px 24px rgba(0,0,0,.10), 0 2px 6px rgba(0,0,0,.06);
+  --il-shadow-xl: 0 24px 60px rgba(0,0,0,.16);
+  --il-ring-focus: 0 0 0 3px var(--il-blue-050);
+
+  --il-nav-h: 76px;
+
+  --il-ease:     cubic-bezier(.4,0,.2,1);
+  --il-dur-fast: 120ms;
+  --il-dur:      200ms;
+  --il-dur-slow: 400ms;
+}
