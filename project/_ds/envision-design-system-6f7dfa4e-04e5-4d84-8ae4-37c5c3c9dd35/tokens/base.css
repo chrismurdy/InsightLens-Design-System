@@ -1,0 +1,58 @@
+/* ============================================================
+   Envision — Base layer & typographic utilities
+   Element defaults that express the brand voice, plus a small
+   set of type classes used by specimens, components & kits.
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-p2);
+  line-height: var(--lh-p2);
+  font-weight: var(--fw-regular);
+  color: var(--text-body);
+  background: var(--surface-page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Headings — Gotham, navy ink */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--text-brand);
+  margin: 0;
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tracking-tight);
+  text-wrap: balance;
+}
+
+a { color: var(--text-link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---- Heading type classes ---- */
+.ev-display { font-family: var(--font-display); font-weight: var(--fw-bold);
+  font-size: var(--fs-display); line-height: var(--lh-display); letter-spacing: var(--tracking-tight); color: var(--text-brand); }
+.ev-h1 { font-family: var(--font-display); font-weight: var(--fw-bold); font-size: var(--fs-h1); line-height: var(--lh-h1); letter-spacing: var(--tracking-tight); color: var(--text-brand); }
+.ev-h2 { font-family: var(--font-display); font-weight: var(--fw-bold); font-size: var(--fs-h2); line-height: var(--lh-h2); letter-spacing: var(--tracking-tight); color: var(--text-brand); }
+.ev-h3 { font-family: var(--font-display); font-weight: var(--fw-medium); font-size: var(--fs-h3); line-height: var(--lh-h3); color: var(--text-brand); }
+.ev-h4 { font-family: var(--font-display); font-weight: var(--fw-medium); font-size: var(--fs-h4); line-height: var(--lh-h4); color: var(--text-brand); }
+.ev-h5 { font-family: var(--font-display); font-weight: var(--fw-medium); font-size: var(--fs-h5); line-height: var(--lh-h5); color: var(--text-brand); }
+.ev-h6 { font-family: var(--font-display); font-weight: var(--fw-medium); font-size: var(--fs-h6); line-height: var(--lh-h6); color: var(--text-brand); }
+
+/* ---- Body type classes ---- */
+.ev-lead { font-family: var(--font-body); font-size: var(--fs-p1); line-height: var(--lh-p1); color: var(--text-body); }
+.ev-body { font-family: var(--font-body); font-size: var(--fs-p2); line-height: var(--lh-p2); color: var(--text-body); }
+.ev-small { font-family: var(--font-body); font-size: var(--fs-p3); line-height: var(--lh-p3); color: var(--text-body); }
+.ev-caption { font-family: var(--font-body); font-size: var(--fs-caption); line-height: var(--lh-caption); color: var(--text-muted); }
+
+/* Eyebrow / overline — the brand's signature all-caps label */
+.ev-eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--fs-p3);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--text-link);
+}

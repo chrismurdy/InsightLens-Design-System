@@ -1,0 +1,31 @@
+:root {
+  --il-font-display: "Montserrat", "Gotham", "Helvetica Neue", Arial, sans-serif;
+  --il-font-body:    "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+  --il-font-mono:    ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --il-weight-regular: 400;
+  --il-weight-medium:  500;
+  --il-weight-semibold:600;
+  --il-weight-bold:    700;
+  --il-weight-black:   900;
+
+  /* Display / heading scale (Montserrat, tight tracking) */
+  --il-size-display: 64px;  --il-lh-display: 1.04;
+  --il-size-h1:      48px;  --il-lh-h1:      1.08;
+  --il-size-h2:      36px;  --il-lh-h2:      1.15;
+  --il-size-h3:      26px;  --il-lh-h3:      1.25;
+  --il-size-h4:      20px;  --il-lh-h4:      1.3;
+
+  /* Body / UI scale (Noto Sans) */
+  --il-size-lead:    20px;  --il-lh-lead:    1.6;
+  --il-size-body:    16px;  --il-lh-body:    1.65;
+  --il-size-small:   14px;  --il-lh-small:   1.55;
+  --il-size-caption: 12px;  --il-lh-caption: 1.45;
+
+  /* Eyebrow / nav — the brand's ALL-CAPS tracked label */
+  --il-size-eyebrow: 12px;
+  --il-track-eyebrow: 0.14em;
+  --il-track-nav:     0.08em;
+  --il-track-display: -0.02em;
+  --il-track-tight:   -0.01em;
+}

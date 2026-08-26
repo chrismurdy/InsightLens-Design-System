@@ -1,0 +1,61 @@
+/* Element defaults + .il-* type utilities. */
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--il-font-body);
+  font-size: var(--il-size-body);
+  line-height: var(--il-lh-body);
+  color: var(--il-text-primary);
+  background: var(--il-surface-page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--il-font-display);
+  font-weight: var(--il-weight-bold);
+  letter-spacing: var(--il-track-display);
+  color: var(--il-text-primary);
+  margin: 0;
+  text-wrap: pretty;
+}
+h1 { font-size: var(--il-size-h1); line-height: var(--il-lh-h1); }
+h2 { font-size: var(--il-size-h2); line-height: var(--il-lh-h2); }
+h3 { font-size: var(--il-size-h3); line-height: var(--il-lh-h3); }
+h4 { font-size: var(--il-size-h4); line-height: var(--il-lh-h4); letter-spacing: var(--il-track-tight); }
+p  { margin: 0 0 var(--il-space-4); }
+
+a { color: var(--il-text-link); text-decoration: none; transition: color var(--il-dur) var(--il-ease); }
+a:hover { color: var(--il-blue-700); text-decoration: underline; }
+
+img { max-width: 100%; display: block; }
+hr { border: 0; border-top: var(--il-border-hair) solid var(--il-line-hairline); margin: var(--il-space-6) 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Type utilities ───────────────────────────────── */
+.il-display { font-family: var(--il-font-display); font-weight: var(--il-weight-black);
+  font-size: var(--il-size-display); line-height: var(--il-lh-display); letter-spacing: var(--il-track-display); }
+.il-h1 { font-family: var(--il-font-display); font-weight: var(--il-weight-bold); font-size: var(--il-size-h1); line-height: var(--il-lh-h1); letter-spacing: var(--il-track-display); }
+.il-h2 { font-family: var(--il-font-display); font-weight: var(--il-weight-bold); font-size: var(--il-size-h2); line-height: var(--il-lh-h2); letter-spacing: var(--il-track-display); }
+.il-h3 { font-family: var(--il-font-display); font-weight: var(--il-weight-semibold); font-size: var(--il-size-h3); line-height: var(--il-lh-h3); }
+.il-h4 { font-family: var(--il-font-display); font-weight: var(--il-weight-semibold); font-size: var(--il-size-h4); line-height: var(--il-lh-h4); }
+.il-lead { font-size: var(--il-size-lead); line-height: var(--il-lh-lead); color: var(--il-text-secondary); max-width: var(--il-measure); }
+.il-body { font-size: var(--il-size-body); line-height: var(--il-lh-body); }
+.il-small { font-size: var(--il-size-small); line-height: var(--il-lh-small); }
+.il-caption { font-size: var(--il-size-caption); line-height: var(--il-lh-caption); color: var(--il-text-muted); }
+.il-eyebrow { font-family: var(--il-font-body); font-weight: var(--il-weight-semibold);
+  font-size: var(--il-size-eyebrow); letter-spacing: var(--il-track-eyebrow); text-transform: uppercase; color: var(--il-text-secondary); }
+.il-nav-label { font-family: var(--il-font-body); font-weight: var(--il-weight-semibold);
+  font-size: var(--il-size-small); letter-spacing: var(--il-track-nav); text-transform: uppercase; }
+.il-metric { font-family: var(--il-font-display); font-weight: var(--il-weight-bold); font-size: 44px; line-height: 1; letter-spacing: var(--il-track-display); }
+
+/* The logo bracket: a gold corner rule used as a section / quote marker. */
+.il-bracket { border-top: var(--il-bracket) solid var(--il-gold-500);
+  border-left: var(--il-bracket) solid var(--il-gold-500); }
+
+.material-symbols-outlined { font-variation-settings: 'opsz' 24, 'wght' 400, 'FILL' 0, 'GRAD' 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

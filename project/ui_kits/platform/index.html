@@ -1,0 +1,45 @@
+<!-- @dsCard group="Platform" viewport="1440x900" name="Asset management platform" subtitle="Discover agent, Locations and Assets dashboards, scan viewer" -->
+<!-- @startingPoint section="Platform" subtitle="InsightLens platform app shell and dashboards" viewport="1440x900" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>InsightLens platform — UI kit</title>
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { min-width: 1180px; background: var(--il-white); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script>window.__DS_ROOT = "../../";</script>
+<script src="../_dev_shim.js"></script>
+<script>
+Promise.resolve(window.__DS_READY)
+  .then(function () {
+    return window.__dsLoad([
+      "AppShell.jsx", "DiscoverScreen.jsx", "LocationsScreen.jsx",
+      "AssetsScreen.jsx", "ScanViewerScreen.jsx",
+    ]);
+  })
+  .then(function () {
+    var App = eval(Babel.transform([
+      "function App() {",
+      "  var s = React.useState('locations'); var screen = s[0], set = s[1];",
+      "  var body = screen === 'discover' ? <DiscoverScreen />",
+      "    : screen === 'assets' ? <AssetsScreen />",
+      "    : screen === 'scan' ? <ScanViewerScreen />",
+      "    : <LocationsScreen />;",
+      "  return <AppShell screen={screen} onSelect={set}>{body}</AppShell>;",
+      "}",
+      "App;",
+    ].join('\n'), { presets: [["react", { runtime: "classic" }]], sourceType: "script" }).code);
+    ReactDOM.createRoot(document.getElementById("root")).render(React.createElement(App));
+  })
+  .catch(function (e) { console.error(e); });
+</script>
+</body>
+</html>

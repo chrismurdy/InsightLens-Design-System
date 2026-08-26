@@ -1,0 +1,133 @@
+/* ============================================================
+   Envision — Colour tokens
+   Two blues anchor the system:
+     • envision-blue  (#002E72) — brand navy: logo, headings, ink
+     • action-blue    (#0066CC) — interactive blue: buttons, links
+   Neutrals are warm-free greys; semantics follow extended ramps.
+   ============================================================ */
+:root {
+  /* ---- Black & White ---- */
+  --ev-black: #231F20;      /* true brand black (rgb 35,31,32) */
+  --ev-white: #FFFFFF;
+
+  /* ---- Primary · envision-blue (brand navy) ---- */
+  --ev-blue-50:  #E6EAF1;
+  --ev-blue-100: #B0BED3;
+  --ev-blue-200: #8A9FBE;
+  --ev-blue-300: #5C7BA8;   /* interpolated step */
+  --ev-blue-400: #33588E;
+  --ev-blue-500: #002E72;   /* ★ brand primary */
+  --ev-blue-600: #002A68;
+  --ev-blue-700: #002151;
+  --ev-blue-800: #00193F;
+  --ev-blue-900: #001330;
+
+  /* ---- Action · blue-secondary (interactive blue) ---- */
+  --ev-action-50:  #E6EFFC;
+  --ev-action-100: #B0CDF6;
+  --ev-action-200: #8AB5F2;
+  --ev-action-300: #5493EC;
+  --ev-action-400: #337EE9;
+  --ev-action-500: #0066CC;   /* ★ buttons / links default */
+  --ev-action-600: #0056CF;
+  --ev-action-700: #0043A1;
+  --ev-action-800: #00347D;
+  --ev-action-900: #00275F;
+  --ev-action-hover: #3385D6; /* primary button hover */
+  --ev-action-tint:  #E6F0FA; /* secondary button hover fill */
+
+  /* ---- Accent · enverse-blue (bright sky) ---- */
+  --ev-sky-100: #B0D0EF;
+  --ev-sky-200: #8AB9E8;
+  --ev-sky-300: #5498DD;
+  --ev-sky-400: #3385D6;
+  --ev-sky-500: #1A75CC;
+  --ev-sky-600: #005DBA;
+
+  /* ---- Secondary families ---- */
+  --ev-baby-blue-900: #254B61;
+  --ev-slate-900:     #2A2A2D;
+
+  /* ---- Neutral · grey ---- */
+  --ev-grey-50:  #FAFAFA;
+  --ev-grey-100: #F6F6F6;
+  --ev-grey-200: #EDEDED;
+  --ev-grey-300: #E1E1E1;
+  --ev-grey-400: #B1B2B4;
+  --ev-grey-500: #8A8B8F;
+  --ev-grey-600: #6C6D70;
+  --ev-grey-700: #4B4B4B;
+  --ev-grey-800: #36383A;
+  --ev-grey-900: #1F1F1F;
+
+  /* Misc neutrals seen across the kit */
+  --ev-cool-grey: #8E98A8;   /* metadata / captions */
+  --ev-surface-alt: #F5F5F8; /* secondary button rest fill */
+  --ev-border-cool: #E9EBF8; /* hairline inset borders */
+
+  /* ---- Semantic · Danger (red) ---- */
+  --ev-red-100: #EFB0B0;
+  --ev-red-200: #E88A8A;
+  --ev-red-300: #DD5454;
+  --ev-red-500: #CC0000;
+  --ev-red-600: #BA0000;
+  --ev-red-700: #910000;
+  --ev-red-bg:  #FAE6E6;
+
+  /* ---- Semantic · Warning (yellow) ---- */
+  --ev-yellow-100: #FFE9B0;
+  --ev-yellow-300: #FFCF54;
+  --ev-yellow-500: #FFB700;
+  --ev-yellow-700: #B58200;
+  --ev-yellow-bg:  #FFF8E6;
+
+  /* ---- Semantic · Success (lime) ---- */
+  --ev-lime-100: #CCEDBE;
+  --ev-lime-300: #91D872;
+  --ev-lime-500: #5BC52D;
+  --ev-lime-700: #418C20;
+  --ev-lime-bg:  #EFF9EA;
+
+  /* ---- Semantic · Info / brand accent (fuchsia) ---- */
+  --ev-fuchsia-100: #EFB0EF;
+  --ev-fuchsia-500: #CC00CC;
+  --ev-fuchsia-600: #BA00BA;
+  --ev-fuchsia-bg:  #FAE6FA;
+
+  /* ============================================================
+     Semantic aliases — reach for these in product code
+     ============================================================ */
+  /* Text */
+  --text-strong:   var(--ev-grey-900);   /* primary ink */
+  --text-body:     var(--ev-grey-700);   /* body copy */
+  --text-muted:    var(--ev-grey-500);   /* secondary / meta */
+  --text-disabled: var(--ev-grey-400);
+  --text-brand:    var(--ev-blue-500);   /* navy headings */
+  --text-on-dark:  var(--ev-white);
+  --text-link:     var(--ev-action-500);
+
+  /* Surfaces */
+  --surface-page:    var(--ev-white);
+  --surface-raised:  var(--ev-white);
+  --surface-sunken:  var(--ev-grey-100);
+  --surface-alt:     var(--ev-surface-alt);
+  --surface-inverse: var(--ev-blue-500);  /* navy panels / footers */
+  --surface-ink:     var(--ev-black);
+
+  /* Lines */
+  --border-default: var(--ev-grey-300);
+  --border-hairline: var(--ev-border-cool);
+  --border-strong:  var(--ev-grey-400);
+
+  /* Interactive */
+  --action-bg:       var(--ev-action-500);
+  --action-bg-hover: var(--ev-action-hover);
+  --action-fg:       var(--ev-white);
+  --focus-ring:      var(--ev-action-400);
+
+  /* Status */
+  --status-danger:  var(--ev-red-500);
+  --status-warning: var(--ev-yellow-700);
+  --status-success: var(--ev-lime-700);
+  --status-info:    var(--ev-action-500);
+}

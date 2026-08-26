@@ -1,0 +1,90 @@
+:root {
+  /* ── Ink ─────────────────────────────────────────────
+     The site sets type in true black. The hero particle field is near-black. */
+  --il-ink-900: #000000;   /* wordmark "INSIGHT", headings, body copy */
+  --il-ink-800: #111111;
+  --il-ink-700: #181818;   /* hero / dark panel ground */
+  --il-ink-600: #2b2b2b;
+
+  /* ── Envision navy ───────────────────────────────────
+     Sampled from the ENVISION wordmark + bracket in the shared lockup. */
+  --il-navy-700: #16264c;
+  --il-navy-600: #1b2f5e;
+  --il-navy-500: #203870;
+  --il-navy-300: #4c619a;
+  --il-navy-100: #c9d1e6;
+  --il-navy-050: #eef1f8;
+
+  /* ── Signal gold ─────────────────────────────────────
+     The brand accent: the logo bracket + "LENS", every line icon, every chart fill. */
+  --il-gold-700: #b87c00;
+  --il-gold-600: #e09a0d;
+  --il-gold-500: #f8b018;
+  --il-gold-400: #ffc247;
+  --il-gold-200: #ffe3a3;
+  --il-gold-050: #fff6e3;
+
+  /* ── Action blue (platform UI) ───────────────────────
+     Interactive affordances inside the platform: avatar, links, active states. */
+  --il-blue-700: #0a4f8c;
+  --il-blue-500: #1070c0;
+  --il-blue-300: #5aa3dd;
+  --il-blue-050: #e8f1fa;
+
+  /* ── Data teal (second data series) ──────────────────*/
+  --il-teal-600: #14748f;
+  --il-teal-500: #1f92b4;
+  --il-teal-300: #6cc0d6;
+  --il-teal-050: #e6f4f8;
+
+  /* ── Neutrals ────────────────────────────────────────*/
+  --il-white:    #ffffff;
+  --il-grey-050: #fafafa;
+  --il-grey-100: #f2f2f2;
+  --il-grey-200: #e6e6e6;
+  --il-grey-300: #d4d4d4;
+  --il-grey-400: #b0b0b0;
+  --il-grey-500: #909090;
+  --il-grey-600: #6b6b6b;
+  --il-grey-700: #4a4a4a;
+
+  /* ── Semantic ────────────────────────────────────────*/
+  --il-success: #2e8b57;
+  --il-warning: #f8b018;
+  --il-danger:  #c0392b;
+  --il-info:    #1070c0;
+
+  /* ── Aliases: text ───────────────────────────────────*/
+  --il-text-primary:   var(--il-ink-900);
+  --il-text-secondary: var(--il-grey-600);
+  --il-text-muted:     var(--il-grey-500);
+  --il-text-inverse:   var(--il-white);
+  --il-text-link:      var(--il-blue-500);
+  --il-text-accent:    var(--il-gold-600);
+
+  /* ── Aliases: surface ────────────────────────────────*/
+  --il-surface-page:   var(--il-white);
+  --il-surface-subtle: var(--il-grey-100);
+  --il-surface-card:   var(--il-white);
+  --il-surface-dark:   var(--il-ink-700);
+  --il-surface-navy:   var(--il-navy-500);
+  --il-surface-accent: var(--il-gold-050);
+
+  /* ── Aliases: line ───────────────────────────────────*/
+  --il-line-hairline: var(--il-grey-200);
+  --il-line-strong:   var(--il-grey-300);
+  --il-line-accent:   var(--il-gold-500);
+  --il-line-focus:    var(--il-blue-500);
+
+  /* ── Data-visualisation ramp (order as used in the platform) ── */
+  --il-chart-1: var(--il-gold-500);
+  --il-chart-2: var(--il-teal-500);
+  --il-chart-3: var(--il-navy-500);
+  --il-chart-4: var(--il-gold-200);
+  --il-chart-5: var(--il-blue-300);
+  --il-chart-6: var(--il-grey-400);
+
+  /* ── Protection gradient for full-bleed imagery ── */
+  --il-scrim-dark: linear-gradient(90deg, rgba(0,0,0,.88) 0%, rgba(0,0,0,.62) 45%, rgba(0,0,0,.15) 100%);
+  --il-scrim-navy: linear-gradient(90deg, rgba(32,56,112,.92) 0%, rgba(32,56,112,.55) 55%, rgba(32,56,112,.1) 100%);
+}

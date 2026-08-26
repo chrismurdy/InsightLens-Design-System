@@ -1,0 +1,57 @@
+<!-- @dsCard group="Components" viewport="700x210" name="Buttons" subtitle="Square uppercase CTAs — primary, accent, secondary, ghost" -->
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin:0; padding:20px; background:var(--il-white); font-family:var(--il-font-body); }
+  .wrap { display:flex; flex-wrap:wrap; gap:20px; align-items:flex-start; }
+  .col { display:grid; gap:12px; }
+</style></head><body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script>
+  window.__dsFind = function () {
+    var direct = window.InsightLensDesignSystem_8d0629 || window.InsightLensdesignsystem_8d0629;
+    if (direct && direct.Button) return direct;
+    for (var i = 0, ks = Object.keys(window); i < ks.length; i++) {
+      try {
+        var v = window[ks[i]];
+        if (v && typeof v === "object" && v.Button && v.Badge) return v;
+      } catch (e) { /* cross-origin window property */ }
+    }
+    return null;
+  };
+  window.DS = window.__dsFind() || {};
+  window.__DS_ROOT = "../../";
+</script>
+<script src="../../ui_kits/_dev_shim.js"></script>
+<script type="text/x-jsx" id="card-src">
+
+
+const { Button } = window.DS;
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <div className="col">
+    <div className="wrap">
+      <Button variant="primary" icon="arrow_forward">Start a program</Button>
+      <Button variant="accent" icon="arrow_forward">Contact us</Button>
+      <Button variant="secondary">View case study</Button>
+      <Button variant="ghost" icon="download" iconPosition="left">Export</Button>
+    </div>
+    <div className="wrap" style={{alignItems:'center'}}>
+      <Button size="sm">Small</Button>
+      <Button size="md">Medium</Button>
+      <Button size="lg">Large</Button>
+      <Button disabled>Disabled</Button>
+    </div>
+  </div>
+);
+
+</script>
+<script>
+Promise.resolve(window.__DS_READY).then(function () {
+  var src = document.getElementById("card-src").textContent;
+  eval(Babel.transform(src, { presets: [["react", { runtime: "classic" }]], sourceType: "script" }).code);
+}).catch(function (e) { console.error(e); });
+</script>
+</body></html>

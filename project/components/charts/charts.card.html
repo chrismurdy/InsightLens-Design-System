@@ -1,0 +1,50 @@
+<!-- @dsCard group="Components" viewport="700x320" name="Charts" subtitle="Gold-led donut and bar charts from the platform dashboards" -->
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin:0; padding:20px; background:var(--il-white); font-family:var(--il-font-body); }
+  .wrap { display:flex; flex-wrap:wrap; gap:20px; align-items:flex-start; }
+  .col { display:grid; gap:12px; }
+</style></head><body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script>
+  window.__dsFind = function () {
+    var direct = window.InsightLensDesignSystem_8d0629 || window.InsightLensdesignsystem_8d0629;
+    if (direct && direct.Button) return direct;
+    for (var i = 0, ks = Object.keys(window); i < ks.length; i++) {
+      try {
+        var v = window[ks[i]];
+        if (v && typeof v === "object" && v.Button && v.Badge) return v;
+      } catch (e) { /* cross-origin window property */ }
+    }
+    return null;
+  };
+  window.DS = window.__dsFind() || {};
+  window.__DS_ROOT = "../../";
+</script>
+<script src="../../ui_kits/_dev_shim.js"></script>
+<script type="text/x-jsx" id="card-src">
+
+
+const { DonutChart, BarChart } = window.DS;
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <div style={{display:'grid',gridTemplateColumns:'300px 1fr',gap:28,alignItems:'start'}}>
+    <DonutChart title="Digital upgrade" size={140} data={[
+      {label:'Complete',value:61},{label:'Scheduled',value:24},{label:'No',value:15}]} />
+    <BarChart title="Location Type" height={170} data={[
+      {label:'Standard',value:118},{label:'Showroom',value:32},{label:'Flagship',value:11},
+      {label:'Legacy',value:41},{label:'Remote',value:38}]} />
+  </div>
+);
+
+</script>
+<script>
+Promise.resolve(window.__DS_READY).then(function () {
+  var src = document.getElementById("card-src").textContent;
+  eval(Babel.transform(src, { presets: [["react", { runtime: "classic" }]], sourceType: "script" }).code);
+}).catch(function (e) { console.error(e); });
+</script>
+</body></html>

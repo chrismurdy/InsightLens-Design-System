@@ -1,0 +1,50 @@
+/* ============================================================
+   Envision — Spacing, radius, shadow & layout tokens
+   Spacing scale mirrors the Figma reference (25→1300).
+   Radii are restrained — Envision UI favours sharp, architectural
+   edges; buttons are square, cards lightly rounded.
+   ============================================================ */
+:root {
+  /* ---- Spacing scale (Figma names → px) ---- */
+  --space-25:  2px;
+  --space-50:  4px;
+  --space-100: 8px;
+  --space-200: 12px;
+  --space-300: 16px;
+  --space-400: 20px;
+  --space-500: 24px;
+  --space-600: 28px;
+  --space-700: 32px;
+  --space-800: 40px;
+  --space-900: 48px;
+  --space-1000: 52px;
+  --space-1100: 64px;
+  --space-1200: 128px;
+  --space-1300: 256px;
+
+  /* ---- Radius ---- */
+  --radius-none: 0px;       /* buttons, inputs, signage-like blocks */
+  --radius-xs: 4px;         /* alerts, small chips */
+  --radius-sm: 8px;
+  --radius-md: 12px;        /* cards, swatches */
+  --radius-lg: 16px;        /* feature panels */
+  --radius-pill: 999px;     /* badges / avatars */
+
+  /* ---- Elevation (from Shadow page) ---- */
+  --shadow-sm: 0px 1px 1px 0px rgba(0,0,0,0.02), 0px 2px 4px 0px rgba(0,0,0,0.04);
+  --shadow-md: 0px 1px 4px 0px rgba(0,0,0,0.04), 0px 4px 10px 0px rgba(0,0,0,0.08);
+  --shadow-lg: 0px 2px 20px 0px rgba(0,0,0,0.04), 0px 8px 32px 0px rgba(0,0,0,0.08);
+  --shadow-xl: 0px 8px 20px 0px rgba(0,0,0,0.06), 0px 24px 60px 0px rgba(0,0,0,0.12);
+
+  /* ---- Layout ---- */
+  --container-max: 1280px;
+  --gutter: 96px;           /* page side padding on the Figma boards */
+  --gutter-tight: 24px;
+
+  /* ---- Motion ---- */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1); /* @kind other */
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);         /* @kind other */
+  --dur-fast: 120ms;  /* @kind other */
+  --dur-base: 200ms;  /* @kind other */
+  --dur-slow: 320ms;  /* @kind other */
+}
