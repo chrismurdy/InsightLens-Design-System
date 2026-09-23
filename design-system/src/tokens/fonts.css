@@ -1,12 +1,134 @@
-/* Typefaces — SUBSTITUTION IN PLACE.
-   The insightlens.com site is a Wix build; its webfont files and CSS could not be
-   read (cross-origin). The InsightLens wordmark is a heavy geometric sans; the
-   closest freely available match is Montserrat, which is also the declared web
-   fallback for Gotham in the parent Envision system. Body/UI text uses Noto Sans,
-   matching the parent Envision system. Replace both with the real licensed
-   families when they are supplied — no other file needs to change. */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Noto+Sans:wght@400;500;600;700&display=swap");
-
-/* Brand iconography is a set of gold line icons shipped as PNG in assets/icons/.
-   Supplementary UI glyphs use Material Symbols Outlined (CDN). */
+/* Supplementary UI glyphs use Material Symbols Outlined (CDN). This remains a
+   flagged substitution — see readme.md. @import must come first in the file. */
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap");
+
+/* Typefaces — REAL, self-hosted.
+   Gotham is the InsightLens brand typeface per InsightLens_Brand_Guide_Lines_REV2.pdf
+   (page 8, "Logo Font & Colour Guide") — used for both display and body copy, no
+   separate body face. Font files supplied directly by the brand owner and converted
+   to WOFF2 here. Each weight below maps to the real named Gotham style closest to
+   it; declared as a `font-weight` range so any of the design system's existing
+   400/500/600/700/900 weight tokens resolves to a real, licensed file — no synthetic
+   bold/italic. */
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-ThinItalic.woff2") format("woff2");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-XLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-XLightItalic.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+/* Book is Gotham's regular-weight style — carries --il-weight-regular (400). */
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-Book.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-BookItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+/* Medium covers both --il-weight-medium (500) and --il-weight-semibold (600) —
+   Gotham's standard set has no separate Semibold style; Medium is the closest real
+   weight and is registered across that whole range. */
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-Medium.woff2") format("woff2");
+  font-weight: 500 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-MediumItalic.woff2") format("woff2");
+  font-weight: 500 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+/* Black covers --il-weight-black (900) and up to (but not including) Ultra. */
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-Black.woff2") format("woff2");
+  font-weight: 800 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-BlackItalic.woff2") format("woff2");
+  font-weight: 800 900;
+  font-style: italic;
+  font-display: swap;
+}
+/* Ultra is heavier than Black; not used by any current token but registered for
+   completeness at the top of the CSS font-weight range. */
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-Ultra.woff2") format("woff2");
+  font-weight: 901 950;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-UltraItalic.woff2") format("woff2");
+  font-weight: 901 950;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Brand iconography is a set of gold line icons shipped as PNG in assets/icons/. */

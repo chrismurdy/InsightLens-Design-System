@@ -1,4 +1,11 @@
-import "./styles.css";
+// Styles are NOT imported here on purpose. This file is a JS/TS entry point built
+// by Vite; routing styles.css through it would pull every @font-face and image
+// url() into Vite's JS-triggered CSS asset pipeline, which (in library mode) has
+// inlined local font files as base64 instead of emitting them as real files.
+// Consumers import the raw stylesheet directly instead: see package.json's
+// "./styles.css" export, which resolves to src/styles.css — an unprocessed CSS
+// file whose relative asset paths (../assets/fonts/*, ../assets/icons/*) resolve
+// correctly as shipped, exactly like the original prototype's plain <link> usage.
 
 export { Button } from "./components/buttons/Button";
 export type { ButtonProps } from "./components/buttons/Button";

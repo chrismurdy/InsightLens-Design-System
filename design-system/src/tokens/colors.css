@@ -1,14 +1,20 @@
 :root {
   /* ── Ink ─────────────────────────────────────────────
-     The site sets type in true black. The hero particle field is near-black. */
-  --il-ink-900: #000000;   /* wordmark "INSIGHT", headings, body copy */
+     Rich Black, Pantone Black 6 — confirmed by pixel-sampling the color swatch in
+     InsightLens_Brand_Guide_Lines_REV2.pdf (page 8): rgb(17,15,13). This is the
+     official brand black, not a pure #000. */
+  --il-ink-900: #110f0d;   /* wordmark "INSIGHT", headings, body copy */
   --il-ink-800: #111111;
   --il-ink-700: #181818;   /* hero / dark panel ground */
   --il-ink-600: #2b2b2b;
 
   /* ── Envision navy ───────────────────────────────────
      Sampled from the ENVISION wordmark + bracket in the shared lockup.
-     Not confirmed against a brand-standard source — see readme "Substitutions". */
+     NOTE: InsightLens_Brand_Guide_Lines_REV2.pdf defines only three official
+     colors — Rich Black, White and Gold (see above/below). Navy, action blue and
+     data teal are NOT part of that guide; they're a platform-UI extension
+     reconstructed from product screenshots in the original design session and
+     remain unconfirmed against any brand standard — see readme "Substitutions". */
   --il-navy-700: #16264c;
   --il-navy-600: #1b2f5e;
   --il-navy-500: #203870;
@@ -18,12 +24,14 @@
 
   /* ── Signal gold ─────────────────────────────────────
      The brand accent: the logo bracket + "LENS", every line icon, every chart fill.
-     Base sampled at rgb(249,179,23) / #F9B317 from the site's own logo, favicon and
-     icon files pulled from the InsightLens Wix Media Manager — confirmed real-asset
-     data, not a guess. */
+     Official value — Pantone 7549C — confirmed by pixel-sampling the swatch in
+     InsightLens_Brand_Guide_Lines_REV2.pdf (page 8): rgb(249,174,11) / #F9AE0B.
+     Cross-checked against the same rendered "LENS" glyph elsewhere on the page —
+     identical value. Supersedes the earlier CDN/Wix pixel estimate (#F9B317),
+     which was already within a few units of this official figure. */
   --il-gold-700: #b87c00;
   --il-gold-600: #e09a0d;
-  --il-gold-500: #f9b317;
+  --il-gold-500: #f9ae0b;
   --il-gold-400: #ffc247;
   --il-gold-200: #ffe3a3;
   --il-gold-050: #fff6e3;

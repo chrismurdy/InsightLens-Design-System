@@ -1,6 +1,10 @@
 :root {
-  --il-font-display: "Montserrat", "Gotham", "Helvetica Neue", Arial, sans-serif;
-  --il-font-body:    "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+  /* Gotham is the one InsightLens brand typeface — used for both display and body,
+     per InsightLens_Brand_Guide_Lines_REV2.pdf. Real font files self-hosted via
+     tokens/fonts.css; Montserrat/Helvetica remain only as a fallback chain for the
+     (unlikely) case the woff2 files fail to load. */
+  --il-font-display: "Gotham", "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --il-font-body:    "Gotham", "Helvetica Neue", Arial, sans-serif;
   --il-font-mono:    ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
 
   --il-weight-regular: 400;

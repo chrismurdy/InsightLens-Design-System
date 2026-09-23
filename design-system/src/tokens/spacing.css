@@ -24,6 +24,12 @@
 
   --il-border-hair: 1px;
   --il-border-mid:  2px;
+  /* Flat fallback thickness for the .il-bracket border rule (an inline accent,
+     not the standalone edge graphic). The brand guide specs the standalone edge
+     graphic itself as proportional — thickness = 16.4% of its own equal
+     height/width, never a fixed px value — see
+     InsightLens_Brand_Guide_Lines_REV2.pdf page 7 ("Logo Mark"). A dedicated
+     EdgeGraphic component would size by that percentage instead of this token. */
   --il-bracket:     3px;    /* thickness of the logo bracket motif */
 
   --il-shadow-sm: 0 1px 2px rgba(0,0,0,.06), 0 1px 3px rgba(0,0,0,.08);

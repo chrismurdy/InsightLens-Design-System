@@ -14,7 +14,6 @@ export default defineConfig({
     rollupOptions: {
       external: ["react", "react-dom", "react/jsx-runtime"],
     },
-    cssCodeSplit: false,
     sourcemap: true,
   },
 });

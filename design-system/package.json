@@ -6,17 +6,19 @@
   "main": "./dist/insightlens-design-system.cjs",
   "module": "./dist/insightlens-design-system.js",
   "types": "./dist/index.d.ts",
-  "style": "./dist/style.css",
+  "style": "./src/styles.css",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/insightlens-design-system.js",
       "require": "./dist/insightlens-design-system.cjs"
     },
-    "./styles.css": "./dist/style.css"
+    "./styles.css": "./src/styles.css"
   },
   "files": [
     "dist",
+    "src/styles.css",
+    "src/tokens",
     "src/assets"
   ],
   "sideEffects": [
